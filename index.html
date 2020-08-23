@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html manifest="/shop.appcache">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+<link rel="stylesheet" type="text/css" href="\index.css">
+<link rel="icon" type="icon" sizes="128x128" href="/favicon.ico"/>
+<link rel="apple-touch-icon" type="icon" sizes="128x128" href="/favicon.ico"/>
+<meta charset="utf-8">
+<title>鲜直达橱窗</title>
+<script>
+let menu=[
+	{
+		name:'三黄鸡',
+		picture:'/image/头像.jpg',
+		money:'50.00'
+	},
+	{
+		name:'三黄鸡',
+		picture:'/image/头像.jpg',
+		money:'50.00'
+	},
+]
+function ld(){
+console.log('load')
+document.getElementById('page').style.height=String(window.height-10)+"px"
+document.getElementById('page').style.height=String((window.height-10)/19*9)+"px"
+for(let index in menu){
+	document.getElementById('shower').innerHTML=document.getElementById('shower').innerHTML+"<div class='menu'><div id='row' style='justify-content:flex-start' class='shower'><image style='height:150px;width:150px;margin-right:15px' src='"+menu[index].picture+"'/><text style='font-size:50px;font-weight:525;'>"+menu[index].name+"</text></div></div>";
+}
+}
+</script>
+</head>
+ 
+<body onload="ld()">
+	<div id="page" >
+		<div id="col" style="justify-content:flex-start">
+		<div id="row" style="justify-content:flex-start;"><!--头像与名称-->
+			<image src="/image/头像.jpg" style="width: 75px;height: 75px;margin: 20px;border-radius: 50%;"></image>
+			<div id="col">
+				<text style="color:#FFFFFF;font-size:37.5px">鲜直达私房橱窗</text>
+			</div>
+		</div>
+		<div class="items"><!--内容托盘-->
+			<div style="margin:50px;margin-top:0px;margin-bottom:0px"><!--空白边框-->
+				<div id="col" style="justify-content:flex-start"><!--信息展示-->
+					<text class="txt">市区内🈵60元送货上门😘</text>
+					<text class="desc">做良心生意、挣良心钱，本店产品都是纯手工制</text>
+					<div id="shower" style="justify-content:flex-start"></div><!--内容-->
+				</div>
+			</div>
+		</div>
+		</div>
+	</div>
+</body>
+ 
+</html>
