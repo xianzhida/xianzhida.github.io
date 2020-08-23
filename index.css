@@ -10,12 +10,6 @@
 }
 #page{
     background-color: #70F070;
-	display:flex;
-	flex-direction:row;
-	justify-content:center;
-	margin:10px;
-	width:900px;
-	height:1900px;
 }
 .items{
     width:100%;
